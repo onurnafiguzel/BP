@@ -8,5 +8,9 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BP.Api.Service\BP.Api.Service.csproj" />
+  </ItemGroup>
+
 
 </Project>

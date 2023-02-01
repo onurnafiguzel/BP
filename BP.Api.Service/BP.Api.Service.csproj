@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BP.Api.Data.Models\BP.Api.Data.Models.csproj" />
+    <ProjectReference Include="..\BP.Api.Models\BP.Api.Models.csproj" />
+  </ItemGroup>
+
 </Project>
