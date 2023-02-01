@@ -31,8 +31,10 @@ namespace BP.Api
             services.AddControllers();
 
             services.AddHealthChecks();
-
-            services.AddScoped<IContactService, ContactService>();
+            
+            services.ConfigureMapping();
+            
+            services.AddScoped<IContactService, ContactService>();            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
