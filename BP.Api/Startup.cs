@@ -1,3 +1,4 @@
+using BP.Api.Extensions;
 using BP.Api.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -42,13 +43,7 @@ namespace BP.Api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHealthChecks("/api/health", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions
-            {
-                ResponseWriter = async (context, report) =>
-                {
-                    await context.Response.WriteAsync("OK");
-                }
-            });
+            app.UseCustomHealthCheck();
 
             app.UseHttpsRedirection();
 
