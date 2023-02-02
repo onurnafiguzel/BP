@@ -27,5 +27,12 @@ namespace BP.Api.Controllers
         {
             return contactService.GetContactById(id);
         }
+
+        [HttpPost]
+        public ContactDVO CreateContact(ContactDVO Contact)
+        {
+            // Create ContactDVO
+            return null;
+        }
     }
 }
