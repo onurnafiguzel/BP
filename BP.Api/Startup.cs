@@ -42,6 +42,12 @@ namespace BP.Api
             services.AddScoped<IContactService, ContactService>();
 
             services.AddTransient<IValidator<ContactDVO>, ContactValidator>();
+
+            services.AddHttpClient("garantiapi", config =>
+             {
+                 config.BaseAddress = new Uri("http://www.garanti.com");
+                 config.DefaultRequestHeaders.Add("Authorization", "Bearer 123");
+             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
