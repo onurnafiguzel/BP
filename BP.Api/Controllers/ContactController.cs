@@ -22,6 +22,7 @@ namespace BP.Api.Controllers
             configuration = Configuration;
         }
 
+        [ResponseCache(Duration = 10)]
         [HttpGet("{id}")]
         public ContactDVO Get(int id)
         {

@@ -54,6 +54,8 @@ namespace BP.Api
 
             app.UseCustomHealthCheck();
 
+            app.UseResponseCaching();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
